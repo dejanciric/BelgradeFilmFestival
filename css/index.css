@@ -1,0 +1,24 @@
+body {
+    background-color: #cccccc;
+}
+
+#jezik:hover,active,visited{
+    text-decoration: none;
+    color: #669966;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover{    
+    text-decoration: none;
+}
+nav.navbar {
+    font-size: 130%;
+}
