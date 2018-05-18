@@ -1,5 +1,7 @@
 body {
     background-color: #cccccc;
+     background-image: url(../images/bgg.jpg);
+    background-size: contain;
 }
 
 #jezik:hover,active,visited{
