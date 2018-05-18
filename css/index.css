@@ -2,6 +2,7 @@ body {
     background-color: #cccccc;
      background-image: url(../images/bgg.jpg);
     background-size: contain;
+    font-family: sans-serif;
 }
 
 #jezik:hover,active,visited{
@@ -76,4 +77,45 @@ nav.navbar {
 .strike > span:after {
     left: 100%;
     margin-left: 15px;
+}
+
+.borderless td, .borderless th {
+    border: none;
+}
+
+.style{
+    font-style: italic;
+    color: gray;
+}
+
+.gallery{
+    margin: 10px, 50px;
+}
+.gallery img{
+    width: 230px;
+    padding: 5px;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+.gallery img:hover{
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.tab{
+    font-weight: bold;
+    color:white;
+}
+.tab:hover{
+    font-weight: bold;
+    color:gold;
+}
+
+.tabinvert{
+    font-weight: bold;
+    color:gold;
+}
+.tabinvert:hover{
+    font-weight: bold;
+    color:white;
 }
