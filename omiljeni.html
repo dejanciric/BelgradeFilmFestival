@@ -17,7 +17,7 @@
          <!-- Nas css -->
          <link rel="stylesheet" type="text/css" href="css/index.css">
       </head>
-      <body>
+      <body onload="ucitaj()">
          <nav class="navbar navbar-header sticky-top navbar-expand-lg navbar-light bg-dark m-3 rounded">
             <a class="navbar-brand p-0 m-0" href="#">
             <img class="p-0 m-0 rounded" src="images/logo.png" height="40" alt="Festival Logo">
@@ -83,6 +83,7 @@
             <div class="row">
                <div class="col-sm-10">
                   <div class="jumbotron">
+
                      <div class="row">
                         <div class="col-sm-6">
                            <h1>Program</h1>
@@ -100,9 +101,10 @@
                         </div>
                      </div>
                      <hr>
-                     <div class= "film">
+                     <label id="poruka"></label>
+                     <div class= "film" id = "film1">
                      <div class= "row">
-                     	
+                        
                         <div class = "col-sm-6">
                            <a href="film1.html"><img  class ="m-2" class= "align-self-start"src="images/poster1.jpg" width="150px" height = "200px" align="left"></a> 
                            <a href="film1.html" class="naslovFilma">
@@ -124,9 +126,9 @@
                      </div>
                      <hr>
                  </div>
-                     <div class= "film">
+                     <div class= "film" id = "film2">
                      <div class= "row">
-                     	
+                        
                         <div class = "col-sm-6">
                            <a href="film2.html"><img  class ="m-2" class= "align-self-start"src="images/poster2.jpg" width="150px" height = "200px" align="left"></a> 
                            <a href="film2.html" class="naslovFilma">
@@ -148,9 +150,9 @@
                      </div>
                      <hr>
                  </div>
-                     <div class= "film">
+                     <div class= "film" id = "film3">
                      <div class= "row">
-                     	
+                        
                         <div class = "col-sm-6">
                            <a href="film3.html"><img  class ="m-2" class= "align-self-start"src="images/poster3.jpg" width="150px" height = "200px" align="left"></a> 
                            <a href="film3.html" class="naslovFilma">
@@ -158,7 +160,7 @@
                               
                            </a>
                            
-                           <i>	Drama | 117 min</i><br><br>
+                           <i>   Drama | 117 min</i><br><br>
                            <i>Pocetak prikazivanja :</i> 24.05.2018
                            <br><br>
                            <img src = "images/3stars.png" width="100px">
@@ -173,10 +175,10 @@
                  </div>
                  <hr>
                      </div>
-                     <div class= "film">
+                     <div class= "film" id = "film4">
                      <div class= "row">
                      
-                     	
+                        
                         <div class = "col-sm-6">
                            <a href="film4.html"><img  class ="m-2" class= "align-self-start"src="images/poster4.jpg" width="150px" height = "200px" align="left"></a> 
                            <a href="film4.html" class="naslovFilma">
@@ -185,7 +187,7 @@
                            </a>
                             
                            <i>Triler | 106 min</i><br><br>
-                           <i>Pocetak prikazivanja :</i> 28.02.2018	
+                           <i>Pocetak prikazivanja :</i> 28.02.2018  
                            <br><br>
                            <img src = "images/2stars.png" width="100px">
                         </div>
@@ -225,95 +227,126 @@
             </div>
          </footer>
          	<script>
-	  
-	  $(function(){
-	    
-	    var alpha = [];
-	    var number = [];
-	    var normal = []
-	    var popularni = []
-	    
-	    $('.film').each(function(){
-	      
-	      var alphaArr = [];
-	      var numArr = [];
-	      var normalArr = [];
-	      var populArr = [];
-	      
-	      alphaArr.push($('h2', this).text());
-	      alphaArr.push($(this));
-	      alpha.push(alphaArr);
-	      alpha.sort();
-	      
-	      numArr.push($('h3', this).text());
-	      numArr.push($(this));
-	      number.push(numArr);
-	      number.sort();
+function ucitaj() {
 
-	      normalArr.push($('h3', this).text());
-	      normalArr.push($(this));
-	      normal.push(normalArr);
+   film1.style.display = 'none';
+   film2.style.display = 'none';
+   film3.style.display = 'none';
+   film4.style.display = 'none';
 
-	      var str ;
-	      switch($('h2', this).text()){
-	      	case "CRNI LEPTIR":
-	      	if(localStorage.film1)
-	      		str = localStorage.film1;
-	      	else
-	      		str = 0;
-	      	break;
-	      	case "FANTASTIČNA ŽENA":
-	      	if(localStorage.film2)
-	      		str = localStorage.film2;
-	      	else
-	      		str = 0;
-	      	break;
-	      	case "DOVIĐENJA, TAMO GORE":
-	      	if(localStorage.film3)
-	      		str = localStorage.film3;
-	      	else
-	      		str = 0;
-	      	break;
-	      	case "AFERA: NIL-HILTON":
-	      	if(localStorage.film4)
-	      		str = localStorage.film4;
-	      	else
-	      		str = 0;
-	      	break;
+   if (localStorage.omiljeni){
+         tokens = localStorage.omiljeni.split(" ");
 
-	      }
+   for (var i = 0; i < tokens.length; i++){
+      switch(tokens[i]){
+         case "film1":
+         film1.style.display = 'block';
+         break;
+          case "film2":
+film2.style.display = 'block';
+         break;
+          case "film3":
+film3.style.display = 'block';
+         break;
+          case "film4":
+film4.style.display = 'block';
+         break;
+      }
+   }
+}else
+document.getElementById("poruka").innerHTML = "Nemate trenutno omiljenih filmova!";
 
-	      populArr.push(str);
-	      populArr.push($(this));
-	      popularni.push(populArr);
-	      popularni.sort();
-		  popularni.reverse();
 
-	    })
-	    
-	    
-	    $('#btnId').on('click', function(){
-	      $('.film').remove();
-	      if (document.getElementById("sel").value=="1"){
-			for(var i=0; i<alpha.length; i++){
-	        $('.jumbotron').append(alpha[i][1]);
-	    }
-	      }else if(document.getElementById("sel").value=="3"){
-	      	for(var i=0; i<popularni.length; i++){
-	        $('.jumbotron').append(popularni[i][1]);
-	      }
-	  }
-	      else{
-	      	for(var i=0; i<normal.length; i++){
-	        $('.jumbotron').append(normal[i][1]);
-	      }
-	      
-	      }
-	    })
-	    
+}
 
-	    
-	  })
+     $(function(){
+       
+       var alpha = [];
+       var number = [];
+       var normal = []
+       var popularni = []
+       
+       $('.film').each(function(){
+         
+         var alphaArr = [];
+         var numArr = [];
+         var normalArr = [];
+         var populArr = [];
+         
+         alphaArr.push($('h2', this).text());
+         alphaArr.push($(this));
+         alpha.push(alphaArr);
+         alpha.sort();
+         
+         numArr.push($('h3', this).text());
+         numArr.push($(this));
+         number.push(numArr);
+         number.sort();
+
+         normalArr.push($('h3', this).text());
+         normalArr.push($(this));
+         normal.push(normalArr);
+
+         var str ;
+         switch($('h2', this).text()){
+           case "CRNI LEPTIR":
+            if(localStorage.film1)
+               str = localStorage.film1;
+            else
+               str = 0;
+            break;
+            case "FANTASTIČNA ŽENA":
+            if(localStorage.film2)
+               str = localStorage.film2;
+            else
+               str = 0;
+            break;
+            case "DOVIĐENJA, TAMO GORE":
+            if(localStorage.film3)
+               str = localStorage.film3;
+            else
+               str = 0;
+            break;
+            case "AFERA: NIL-HILTON":
+            if(localStorage.film4)
+               str = localStorage.film4;
+            else
+               str = 0;
+            break;
+
+         }
+
+         populArr.push(str);
+         populArr.push($(this));
+         popularni.push(populArr);
+         popularni.sort();
+        popularni.reverse();
+
+       })
+       
+       
+       $('#btnId').on('click', function(){
+         $('.film').remove();
+         if (document.getElementById("sel").value=="1"){
+         for(var i=0; i<alpha.length; i++){
+           $('.jumbotron').append(alpha[i][1]);
+       }
+         }else if(document.getElementById("sel").value=="3"){
+            for(var i=0; i<popularni.length; i++){
+           $('.jumbotron').append(popularni[i][1]);
+         }
+     }
+         else{
+            for(var i=0; i<normal.length; i++){
+           $('.jumbotron').append(normal[i][1]);
+         }
+         
+         }
+       })
+       
+
+       
+     })
 	
 	</script>
       </body>
