@@ -19,7 +19,7 @@
          <link rel="stylesheet" type="text/css" href="css/index.css">
          <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
       </head>
-      <body class="a">
+      <body>
          <nav class="navbar navbar-header sticky-top navbar-expand-lg navbar-light bg-dark m-3 rounded">
             <a class="navbar-brand p-0 m-0" href="#">
             <img class="p-0 m-0 rounded" src="images/logo.png" height="40" alt="Festival Logo">
@@ -66,9 +66,9 @@
                   <li class="nav-item dropdown">
                      <a href="#" class="fa fa-facebook mr-0"></a>
                      <a href="#" class="fa fa-twitter mr-3"></a>
-                     <a class="text-light ml-2" href="kontakt.html" id="jezik">SR</a>
+                     <a class="text-light ml-2" href="prodaja.html" id="jezik">SR</a>
                      <a class="text-light">|</a>
-                     <a class="text-light mr-2" href="kontaktEN.html" id="jezik">EN</a>
+                     <a class="text-light mr-2" href="prodajaEN.html" id="jezik">EN</a>
                   </li>
                </ul>
             </div>
@@ -78,53 +78,51 @@
                <div class="col-sm-12">
                   <ul class="breadcrumb bg-dark">
                      <li class="breadcrumb-item"><a href="index.html"><font color="white" face ="Palatino Linotype">Home</font></a></li>
-                     <li class="breadcrumb-item active"><font face ="Palatino Linotype">Kontakt</font></li>
+                     <li class="breadcrumb-item active"><font face ="Palatino Linotype">Selling places</font></li>
                   </ul>
                </div>
             </div>
             <div class="row">
-               <div class="col-sm-8">
-                  <div class="card" style="padding:10px;margin:20px; margin-right:30px;text-align:center;border-width: 5px">
-                     <div class="card-header">
-                        <h4>
-                           <strong>
-                           Kontaktirajte nas   
-                           </strong>
-                           <img src="images/contact.png" width="35px" id="signup_icon">
-                        </h4>
-                     </div>
-                     <div class="card-body" align="center" style="background-image: url('images/pattern1.png');" >
-                        
-                           <div class="form-group" style="width:90%">
-                              <div class="ml-1" style="color: red; text-align: left"> *</div>
-                              <input type="text" class="form-control" id="name" placeholder="Name">
-                           </div>
-                           <div class="form-group" style="width:90%">
-                              <div class="ml-1" style="color: red; text-align: left"> *</div>
-                              <input type="email" class="form-control" id="email" placeholder="Email">
-                           </div>
-                           <div class="form-group" style="width:90%">
-                              <div class="ml-1" style="color: red; text-align: left"> *</div>
-                              <textarea class="form-control" id="message" placeholder="Message" rows="8"></textarea>
-                           </div>
-                           <font color="red"><b><label id ="msg"></label></b></font>
-                           <hr width="60%">
-                           <button type="submit" class="btn btn-dark mr-3" onclick="posalji()" >Potvrdi</button>
-                           <button type="reset" class="btn btn-dark" onclick="reset()" >Reset</button>
-                           <br>
-                           <br>
-                        
-                     </div>
-                  </div>
-               </div>
-               <div class="col-sm-4">
-                  <div class="jumbotron" style="padding:10px;margin:20px;">
-                     <h4 class="m-3">Beogradski film festival</h4>
-                     <div class="m-3"><strong>Telefon: </strong> 064 229-0600 </div>
-                     <div class="m-3"><strong>Fax: </strong> 064 840-8870</div>
-                     <div class="m-3"><strong>Adresa: </strong> Jurija Gargarina 44a</div>
-                     <div class="m-3"><strong>Email </strong><a href="mailto:bff@gmail.com"> bff@gmail.com</a></div>
-                  </div>
+               <div class="col-sm-12">
+                  <div id="map" style="width: 100% ; height: 600px;"></div>
+                  <script type="text/javascript">
+                     var l1 = "<h4>Selling place Sava Centar</h4> <br> <p class='thicker' style='display:inline'>City:</p></font> Belgrade <br><p class='thicker' style='display:inline'>Address:</p> Milentija Popovića 9<br> <p class='thicker' style='display:inline'>Working time Mon-Fri:</p> 10:00am - 8:00pm<br><p class='thicker' style='display:inline'>Working time Saturday:</p> 10:00am - 3:00pm <br> <p class='thicker' style='display:inline'>Phone number:</p> 011 2206000";
+                     var l2 = "<h4>Selling place Dom Omladine</h4> <br> <p class='thicker' style='display:inline'>City:</p></font> Belgrade <br><p class='thicker' style='display:inline'>Address:</p> Makedonska 22<br> <p class='thicker' style='display:inline'>Working time Mon-Fri:</p> 10:00am - 10:00pm<br><p class='thicker' style='display:inline'Working time Saturday:</p> 10:00am - 10:00pm <br> <p class='thicker' style='display:inline'>Phone number:</p> 011 3220127";
+                     var l3 = "<h4>Selling place Jugoslovenska kinoteka</h4> <br> <p class='thicker' style='display:inline'>City:</p></font> Belgrade <br><p class='thicker' style='display:inline'>Address:</p> Uzun Mirkova 1<br> <p class='thicker' style='display:inline'>Working time Mon-Fri:</p> 4:00pm - 10:00pm<br><p class='thicker' style='display:inline'>Working time Saturday:</p> 10:00am - 8:30pm <br> <p class='thicker' style='display:inline'>Phone number:</p> 011 2622555";
+                     var l4 = "<h4>Selling place Cineplexx Delta City</h4> <br> <p class='thicker' style='display:inline'>City:</p></font> Belgrade <br><p class='thicker' style='display:inline'>Address:</p> Jurija Gagarina 16-16a<br> <p class='thicker' style='display:inline'>Working time Mon-Fri:</p> 10:00am - 10:00pm<br><p class='thicker' style='display:inline'>Working time Saturday:</p> 10:00am - 10:00pm <br> <p class='thicker' style='display:inline'>Phone number:</p> 011 2203400";
+                     var l5 = "<h4>Selling place Cineplexx Usce</h4> <br> <p class='thicker' style='display:inline'>City:</p></font> Belgrade <br><p class='thicker' style='display:inline'>Address:</p> Bulevar Mihajla Pupina 4 <br> <p class='thicker' style='display:inline'>Working time Mon-Fri:</p> 10:00am - 10:00pm<br><p class='thicker' style='display:inline'>Working time Saturday:</p> 10:00am - 10:00pm <br> <p class='thicker' style='display:inline'>Phone number:</p> 011 2206000";
+                     var locations = [
+                         [l1, 44.809099, 20.432060, 1],
+                         [l2, 44.815711, 20.462903, 2],
+                         [l3, 44.819830, 20.455952, 3],
+                         [l4, 44.806012, 20.404255, 4],
+                         [l5, 44.815626, 20.438183, 5]
+                     ];
+                     
+                     var map = new google.maps.Map(document.getElementById('map'), {
+                         zoom: 13,
+                         center: new google.maps.LatLng(44.812363, 20.464234),
+                         mapTypeId: google.maps.MapTypeId.ROADMAP
+                     });
+                     
+                     var infowindow = new google.maps.InfoWindow();
+                     
+                     var marker, i;
+                     
+                     for (i = 0; i < locations.length; i++) {
+                         marker = new google.maps.Marker({
+                             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                             map: map
+                         });
+                     
+                         google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                             return function() {
+                                 infowindow.setContent(locations[i][0]);
+                                 infowindow.open(map, marker);
+                             }
+                         })(marker, i));
+                     }
+                  </script>
                </div>
             </div>
          </div>
@@ -134,11 +132,11 @@
             <!--Footer Links-->
             <div class="container-fluid ">
                <div class="row">
-                  <div class="col-sm-3"><img class="m-3 rounded"  src="images/logo.png" align="left" width="150px" height="100px" float="left"></div>
+                  <div class="col-sm-3 " ><img class="m-3 rounded"  src="images/logo.png" align="left" width="150px" height="100px" float="left"></div>
                   <div class="col-sm-6">
                      <center class="m-3"     >
                         <p style="color:white; padding-bottom:1px; margin-bottom:1px; padding-top:1px; margin-top:1px;">
-                           <i>Copyright &copy; 2018 Elektrotehnički fakultet Univerziteta u Beogradu, Odsek za softversko inzenjerstvo<br>Developed by <b>Ćirić Dejan, Zarubica Miljan</b> </i>
+                           <i>Copyright &copy; 2018 Faculty of Electrical Engineering University of Belgrade, department Software Engineering<br>Developed by <b>Ćirić Dejan, Zarubica Miljan</b> </i>
                         </p>
                      </center>
                   </div>
@@ -149,38 +147,5 @@
                </div>
             </div>
          </footer>
-         <script type="text/javascript">
-                      function posalji(){
-            var greske ="";
-            var email = document.getElementById("email").value;
-            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            if (re.test(String(email).toLowerCase()) == false)
-              greske +="Format mejla nije dobar<br>"; 
-
-
-            if (document.getElementById("name").value == "" || document.getElementById("email").value == "" || document.getElementById("message").value == "" )
-              greske += "Morate popuniti sva polja<br>"
-
-            if (greske != ""){
-              document.getElementById("msg").innerHTML=greske;
-              return;
-            }
-
-        document.getElementById("msg").innerHTML="<font color='green'>Mejl uspesno poslat</font>";
-        document.getElementById("name").value="";
-            document.getElementById("email").value="";
-            document.getElementById("message").value="";
-
-            }
-              function reset(){
-            
-            document.getElementById("ime").value="";
-            document.getElementById("prezime").value="";
-            document.getElementById("email").value="";
-            document.getElementById("broj").value="";
-            document.getElementById("projekcije").value="0";
-            }
-           
-         </script>
       </body>
    </html>

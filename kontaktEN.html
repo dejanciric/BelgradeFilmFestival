@@ -78,7 +78,7 @@
                <div class="col-sm-12">
                   <ul class="breadcrumb bg-dark">
                      <li class="breadcrumb-item"><a href="index.html"><font color="white" face ="Palatino Linotype">Home</font></a></li>
-                     <li class="breadcrumb-item active"><font face ="Palatino Linotype">Kontakt</font></li>
+                     <li class="breadcrumb-item active"><font face ="Palatino Linotype">Contact</font></li>
                   </ul>
                </div>
             </div>
@@ -94,7 +94,7 @@
                         </h4>
                      </div>
                      <div class="card-body" align="center" style="background-image: url('images/pattern1.png');" >
-                        
+                        <form action="mailto:bff@gmail.com" method="post" enctype="text/plain" name="forma">
                            <div class="form-group" style="width:90%">
                               <div class="ml-1" style="color: red; text-align: left"> *</div>
                               <input type="text" class="form-control" id="name" placeholder="Name">
@@ -109,20 +109,20 @@
                            </div>
                            <font color="red"><b><label id ="msg"></label></b></font>
                            <hr width="60%">
-                           <button type="submit" class="btn btn-dark mr-3" onclick="posalji()" >Potvrdi</button>
-                           <button type="reset" class="btn btn-dark" onclick="reset()" >Reset</button>
+                           <button type="submit" class="btn btn-dark mr-3" >Submit</button>
+                           <button type="reset" class="btn btn-dark" >Reset</button>
                            <br>
                            <br>
-                        
+                        </form>
                      </div>
                   </div>
                </div>
                <div class="col-sm-4">
                   <div class="jumbotron" style="padding:10px;margin:20px;">
-                     <h4 class="m-3">Beogradski film festival</h4>
-                     <div class="m-3"><strong>Telefon: </strong> 064 229-0600 </div>
+                     <h4 class="m-3">Belgrade film festival</h4>
+                     <div class="m-3"><strong>Phone: </strong> 064 229-0600 </div>
                      <div class="m-3"><strong>Fax: </strong> 064 840-8870</div>
-                     <div class="m-3"><strong>Adresa: </strong> Jurija Gargarina 44a</div>
+                     <div class="m-3"><strong>Address: </strong> Jurija Gargarina 44a</div>
                      <div class="m-3"><strong>Email </strong><a href="mailto:bff@gmail.com"> bff@gmail.com</a></div>
                   </div>
                </div>
@@ -138,7 +138,7 @@
                   <div class="col-sm-6">
                      <center class="m-3"     >
                         <p style="color:white; padding-bottom:1px; margin-bottom:1px; padding-top:1px; margin-top:1px;">
-                           <i>Copyright &copy; 2018 Elektrotehnički fakultet Univerziteta u Beogradu, Odsek za softversko inzenjerstvo<br>Developed by <b>Ćirić Dejan, Zarubica Miljan</b> </i>
+                           <i>Copyright &copy; 2018 Faculty of Electrical Engineering University of Belgrade, department Software Engineering<br>Developed by <b>Ćirić Dejan, Zarubica Miljan</b> </i>
                         </p>
                      </center>
                   </div>
@@ -149,24 +149,24 @@
                </div>
             </div>
          </footer>
-         <script type="text/javascript">
+                  <script type="text/javascript">
                       function posalji(){
             var greske ="";
             var email = document.getElementById("email").value;
             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             if (re.test(String(email).toLowerCase()) == false)
-              greske +="Format mejla nije dobar<br>"; 
+              greske +="Format of email is not correct<br>"; 
 
 
             if (document.getElementById("name").value == "" || document.getElementById("email").value == "" || document.getElementById("message").value == "" )
-              greske += "Morate popuniti sva polja<br>"
+              greske += "All fields must be filled<br>"
 
             if (greske != ""){
               document.getElementById("msg").innerHTML=greske;
               return;
             }
 
-        document.getElementById("msg").innerHTML="<font color='green'>Mejl uspesno poslat</font>";
+        document.getElementById("msg").innerHTML="<font color='green'>Email successfully sent</font>";
         document.getElementById("name").value="";
             document.getElementById("email").value="";
             document.getElementById("message").value="";
