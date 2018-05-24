@@ -17,7 +17,7 @@
          <!-- Nas css -->
          <link rel="stylesheet" type="text/css" href="css/index.css">
       </head>
-      <body>
+      <body onload="rez()">
         <nav class="navbar navbar-header sticky-top navbar-expand-lg navbar-light bg-dark m-3 rounded">
 			<a class="navbar-brand p-0 m-0" href="indexEN.html">
 				<img class="p-0 m-0 rounded" src="images/logo.png" height="40" alt="Festival Logo">
@@ -125,7 +125,8 @@
                            <p class="font-monospace"><font size = "2"><b>Short summary:</b> Outside a mountain town grappling with a series of abductions and murders, Paul, a reclusive writer, struggles to start what he hopes will be a career-saving screenplay. </font></p>
                            <p><b>Actors:</b> Antonio Banderas, Jonathan Rhys Meyers, Piper Perabo</p>
                            <p><b>Director:</b> Brian Goodman</p>
-                        </div>
+                        </div><br>
+                           <label class= " ml-4 align-self-start" align="left"  id ="br1"></label>
                         
                      </div>
                      <hr>
@@ -149,7 +150,8 @@
                            <p class="font-monospace"><font size = "2"><b>Short summary:</b> Marina is a young waitress and wannabe singer. Orlando owns a printing company. Together they plan their future. When Orlando dies suddenly, Marina has to stand up to his family and society to show them what she truly is: a complex, strong, forthright and... fantastic woman.</font></p>
                            <p><b>Actors:</b> Daniela Vega, Francisco Reyes, Luis Gnecco, Aline Küppenheim</p>
                            <p><b>Director:</b> Sebastián Lelio</p>
-                        </div>
+                        </div><br>
+                           <label class= " ml-4 align-self-start" align="left"  id ="br2"></label>
                         
                      </div>
                      <hr>
@@ -173,7 +175,8 @@
                            <p class="font-monospace"><font size = "2"><b>Short summary:</b> November 1919. Two survivors of the trenches set up a scam based on war memorials. One is a brilliant illustrator, the other an unassuming accountant. In the France of the Roaring Twenties, their operation becomes as dangerous as it is spectacular.</font></p>
                            <p><b>Actors:</b> Nahuel Pérez Biscayart, Albert Dupontel, Laurent Lafitte</p>
                            <p><b>Director:</b> Albert Dupontel</p>
-                        </div>
+                        </div><br>
+                           <label class= " ml-4 align-self-start" align="left"  id ="br3"></label>
                         
                      
                  </div>
@@ -199,12 +202,14 @@
                            <p class="font-monospace"><font size = "2"><b>Short summary:</b> Cairo 2011, just weeks before the revolution. Police Detective Noredin, working in the in-famous Kasr el-Nil Police Station, is handed the case of a murdered singer. He soon realizes that the investigation concerns the very power elite, close to the President’s inner circle.</font></p>
                            <p><b>Actors:</b> Fares Fares, Mari Malek, Yasser Ali Maher</p>
                            <p><b>Director:</b>Tarik Saleh</p>
-                        </div>
+                        </div><br>
+                           <label class= " ml-4 align-self-start" align="left"  id ="br4"></label>
                        
                      </div>
                       <hr>
                  </div>
-                     
+                                           <button class="btn btn-dark" style="float:right" onclick="obrisiRez()">Delete all reservations</button>
+
                   </div>
                </div>
             </div>
@@ -320,6 +325,33 @@
 
 	    
 	  })
+
+   function rez(){
+      if (localStorage.film1)
+         document.getElementById("br1").innerHTML="Number of reservations: "+localStorage.film1;
+      else
+         document.getElementById("br1").innerHTML="Number of reservations: 0";
+      if (localStorage.film2)
+         document.getElementById("br2").innerHTML="Number of reservations: "+localStorage.film2;
+      else
+         document.getElementById("br2").innerHTML="Number of reservations: 0";
+      if (localStorage.film3)
+         document.getElementById("br3").innerHTML="Number of reservations: "+localStorage.film3;
+      else
+         document.getElementById("br3").innerHTML="Number of reservations: 0";
+      if (localStorage.film4)
+         document.getElementById("br4").innerHTML="Number of reservations: "+localStorage.film4;
+      else
+         document.getElementById("br4").innerHTML="Number of reservations: 0";
+     }
+
+     function obrisiRez(){
+         localStorage.film1=0;
+         localStorage.film2=0;
+         localStorage.film3=0;
+         localStorage.film4=0;
+location.reload();
+     }
 	
 	</script>
       </body>

@@ -17,7 +17,7 @@
          <!-- Nas css -->
          <link rel="stylesheet" type="text/css" href="css/index.css">
       </head>
-      <body>
+      <body onload="rez()">
         <nav class="navbar navbar-header sticky-top navbar-expand-lg navbar-light bg-dark m-3 rounded">
 			<a class="navbar-brand p-0 m-0" href="index.html">
 				<img class="p-0 m-0 rounded" src="images/logo.png" height="40" alt="Festival Logo">
@@ -126,7 +126,8 @@
                            <p class="font-monospace"><font size = "2"><b>Kratak sadrzaj:</b> Na obodu planinskog gradića, u kome se događa niz otmica i ubistava, povučeni pisac Pol pokušava da započne pisanje scenarija za koji se nada da će mu spasiti karijeru.</font></p>
                            <p><b>Glumci:</b> Antonio Banderas, Jonathan Rhys Meyers, Piper Perabo</p>
                            <p><b>Reziser:</b> Brian Goodman</p>
-                        </div>
+                        </div><br>
+                           <label class= " ml-4 align-self-start" align="left" id ="br1"></label>
                         
                      </div>
                      <hr>
@@ -147,11 +148,11 @@
                            <img src = "images/5stars.png" width="100px">
                         </div>
                         <div class = "col-sm-6">
-                           <p class="font-monospace"><font size = "2"><b>Kratak sadrzaj:</b> Marina je mlada konobarica i buduća pevačica. Orlando ima svoju štampariju. Zajedno planiraju budućnost. Kada Orlando iznenada umre, Marina mora da se suprotstavi njegovoj porodici i društvu i pokaže im ko ja ona zapravo – složena, snažna, iskrena i... fantastična žena.</font></p>
+                           <p class="font-monospace"><font size =    "2"><b>Kratak sadrzaj:</b> Marina je mlada konobarica i buduća pevačica. Orlando ima svoju štampariju. Zajedno planiraju budućnost. Kada Orlando iznenada umre, Marina mora da se suprotstavi njegovoj porodici i društvu i pokaže im ko ja ona zapravo – složena, snažna, iskrena i... fantastična žena.</font></p>
                            <p><b>Glumci:</b> Daniela Vega, Francisco Reyes, Luis Gnecco, Aline Küppenheim</p>
                            <p><b>Reziser:</b> Sebastián Lelio</p>
                         </div>
-                        
+                           <label class= "ml-4 align-self-start" align="left"  id ="br2"></label>
                      </div>
                      <hr>
                  </div>
@@ -174,9 +175,9 @@
                            <p class="font-monospace"><font size = "2"><b>Kratak sadrzaj:</b> U novembru 1919. dvojica preživelih iz rovova smišljaju šemu sa spomenicima veteranima. Jedan je izuzetni dizajner, a drugi skromni računovođa. U Francuskoj ludih dvadesetih, njihova operacija postaje koliko opasna, toliko i spektakularna.</font></p>
                            <p><b>Glumci:</b> Nahuel Pérez Biscayart, Albert Dupontel, Laurent Lafitte</p>
                            <p><b>Reziser:</b> Albert Dupontel</p>
-                        </div>
-                        
-                     
+                        </div><br>
+                           <label class= " ml-4 align-self-start" align="left"  id ="br3"></label>
+
                  </div>
                  <hr>
                      </div>
@@ -200,12 +201,13 @@
                            <p class="font-monospace"><font size = "2"><b>Kratak sadrzaj:</b> Kairo, 2011. godine, nekoliko nedelja pre izbijanja revolucije. Detektiv Noredin, koji radi u ozloglašenoj Kasr el-Nil policijskoj stanici, dobija zadatak da istraži slučaj ubijene pevačice.</font></p>
                            <p><b>Glumci:</b> Fares Fares, Mari Malek, Yasser Ali Maher</p>
                            <p><b>Reziser:</b>Tarik Saleh</p>
-                        </div>
-                       
+                        </div><br>
+                           <label class= " ml-4 align-self-start" align="left"  id ="br4"></label>
+
                      </div>
                       <hr>
                  </div>
-                     
+                      <button class="btn btn-dark" style="float:right" onclick="obrisiRez()">Obrisi sve rezervacije</button>
                   </div>
                </div>
             </div>
@@ -323,6 +325,33 @@
 
 	    
 	  })
+
+      function rez(){
+      if (localStorage.film1)
+         document.getElementById("br1").innerHTML="Broj rezervacija: "+localStorage.film1;
+      else
+         document.getElementById("br1").innerHTML="Broj rezervacija: 0";
+      if (localStorage.film2)
+         document.getElementById("br2").innerHTML="Broj rezervacija: "+localStorage.film2;
+      else
+         document.getElementById("br2").innerHTML="Broj rezervacija: 0";
+      if (localStorage.film3)
+         document.getElementById("br3").innerHTML="Broj rezervacija: "+localStorage.film3;
+      else
+         document.getElementById("br3").innerHTML="Broj rezervacija: 0";
+      if (localStorage.film4)
+         document.getElementById("br4").innerHTML="Broj rezervacija: "+localStorage.film4;
+      else
+         document.getElementById("br4").innerHTML="Broj rezervacija: 0";
+     }
+
+     function obrisiRez(){
+         localStorage.film1=0;
+         localStorage.film2=0;
+         localStorage.film3=0;
+         localStorage.film4=0;
+location.reload();
+     }
 	
 	</script>
       </body>
