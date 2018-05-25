@@ -101,7 +101,7 @@
                         </h4>
                      </div>
                      <div class="card-body" align="center" style="background-image: url('images/pattern1.png');" >
-                        <form action="mailto:bff@gmail.com" method="post" enctype="text/plain" name="forma">
+                        
                            <div class="form-group" style="width:90%">
                               <div class="ml-1" style="color: red; text-align: left"> *</div>
                               <input type="text" class="form-control" id="name" placeholder="Name">
@@ -116,11 +116,11 @@
                            </div>
                            <font color="red"><b><label id ="msg"></label></b></font>
                            <hr width="60%">
-                           <button type="submit" class="btn btn-dark mr-3" >Submit</button>
-                           <button type="reset" class="btn btn-dark" >Reset</button>
+                           <button type="submit" class="btn btn-dark mr-3" onclick="posalji()" >Submit</button>
+                           <button type="reset" class="btn btn-dark"  onclick="reset()">Reset</button>
+                           <br> 
                            <br>
-                           <br>
-                        </form>
+                        
                      </div>
                   </div>
                </div>
@@ -181,11 +181,9 @@
             }
               function reset(){
             
-            document.getElementById("ime").value="";
-            document.getElementById("prezime").value="";
+            document.getElementById("name").value="";
             document.getElementById("email").value="";
-            document.getElementById("broj").value="";
-            document.getElementById("projekcije").value="0";
+            document.getElementById("message").value="";
             }
            
          </script>
