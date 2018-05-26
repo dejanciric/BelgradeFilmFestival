@@ -98,7 +98,8 @@
                         <div class="col-sm-12">
                            <h1 class="m-3" style="display: inline"><b>Crni leptir</b></h1>
 
-                           <button class="btn btn-dark mr-3" style="float:right" onclick="dodaj()">Dodaj u omiljene <img src="images/star.png" width="20px" ></button>
+                           <button class="btn btn-dark mr-3" style="float:right" onclick="dodaj()">Dodaj u omiljene <img src="images/star.png" width="20px" ></button><br>
+                           <font color="green"><b><label id="added" class="mr-3"style="float:right"></label></b></font>
                         </div>
                      </div>
                      <hr>
@@ -428,11 +429,13 @@
             if (localStorage.omiljeni){
               tokens = localStorage.omiljeni.split(" ");
               for (var i = 0; i<tokens.length; i++)
-                if (tokens[i] == "film1") return;
+                if (tokens[i] == "film1") {document.getElementById("added").innerHTML="Već dodat"; return;} 
               localStorage.omiljeni += " film1";
             }
             else 
               localStorage.omiljeni = "film1";
+
+           document.getElementById("added").innerHTML="Uspešno dodat"
            }
 
            function reset(){
