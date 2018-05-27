@@ -295,31 +295,31 @@ document.getElementById("poruka").innerHTML = "There are no favorites!";
          normal.push(normalArr);
 
          var str ;
-         switch($('h2', this).text()){
-           case "CRNI LEPTIR":
-            if(localStorage.film1)
-               str = localStorage.film1;
-            else
-               str = 0;
-            break;
-            case "FANTASTIČNA ŽENA":
-            if(localStorage.film2)
-               str = localStorage.film2;
-            else
-               str = 0;
-            break;
-            case "DOVIĐENJA, TAMO GORE":
-            if(localStorage.film3)
-               str = localStorage.film3;
-            else
-               str = 0;
-            break;
-            case "AFERA: NIL-HILTON":
-            if(localStorage.film4)
-               str = localStorage.film4;
-            else
-               str = 0;
-            break;
+        switch($('h2', this).text()){
+          case "BLACK BUTTERFLY":
+          if(localStorage.film1)
+            str = localStorage.film1;
+          else
+            str = 0;
+          break;
+          case "FANTASTIC WOMAN":
+          if(localStorage.film2)
+            str = localStorage.film2;
+          else
+            str = 0;
+          break;
+          case "SEE YOU UP THERE":
+          if(localStorage.film3)
+            str = localStorage.film3;
+          else
+            str = 0;
+          break;
+          case "THE NILE HILTON INCIDENT":
+          if(localStorage.film4)
+            str = localStorage.film4;
+          else
+            str = 0;
+          break;
 
          }
 
