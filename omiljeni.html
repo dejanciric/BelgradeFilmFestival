@@ -1,372 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
-   <html>
-      <head>
-         <title>Omiljeni filmovi</title>
-         <meta charset="utf-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1">
-         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-         <!-- jQuery library -->
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-         <!-- Popper JS -->
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-         <!-- Latest compiled JavaScript -->
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script></body>
-         <!-- Add icon library -->
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-         <!-- Nas css -->
-         <link rel="stylesheet" type="text/css" href="css/index.css">
-      </head>
-      <body onload="ucitaj()">
-        <nav class="navbar navbar-header sticky-top navbar-expand-lg navbar-light bg-dark m-3 rounded">
-			<a class="navbar-brand p-0 m-0" href="index.html">
-				<img class="p-0 m-0 rounded" src="images/logo.png" height="40" alt="Festival Logo">
-			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+<html>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link text-light mr-1" href="index.html">Početna<span class="sr-only">(current)</span></a>
-					</li>
-					
-					<li class="nav-item">
-						<a class="nav-link text-light mr-1" href="vesti.html">Vesti</a>
-					</li>					
-					
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle text-light mr-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						  O festivalu
-						</a>
-						<div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="istorijat.html">Istorijat</a>
-							<a class="dropdown-item" href="ziri.html">Žiri</a>
-							<a class="dropdown-item" href="prodaja.html">Prodajna mesta</a>
-							<a class="dropdown-item" href="kontakt.html">Kontakt</a>
-						</div>
-					</li>
-					
-                    
-                    <li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle text-light mr-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						  Filmovi
-						</a>
-						<div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="repertoar.html">Reperotar</a>
-							<a class="dropdown-item" href="omiljeni.html">Omiljeni filmovi</a>
-						</div>
-					</li>
-					
-					<li class="nav-item">
-						<a class="nav-link text-light" href="glumci.html">Glumci</a>
-					</li>
-                    
-                    <li class="nav-item">
-						<a class="nav-link text-light" href="sponzori.html">Sponzori</a>
-					</li>
-				</ul>
-				
-				<ul class="navbar-nav navbar-right">
-					<li class="nav-item dropdown">
-                        <a href="https://www.facebook.com" class="fa fa-facebook mr-0"></a>
-                        <a href="https://twitter.com" class="fa fa-twitter mr-3"></a>					   
-						<a class="text-light ml-2" href="omiljeni.html" id="jezik">SR</a>
-						<a class="text-light">|</a>
-						<a class="text-light mr-2" href="omiljeniEN.html" id="jezik">EN</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <ul class="breadcrumb bg-dark">
-                     <li class="breadcrumb-item"><a href="index.html"><font color="white" face ="Palatino Linotype">Početna</font></a></li>
-                     <li class="breadcrumb-item active"><font face ="Palatino Linotype">Omiljeni filmovi</font></li>
-                  </ul>
-               </div>
+<head>
+    <title>Omiljeni filmovi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Nas css -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body onload="ucitaj()">
+    <nav class="navbar navbar-header sticky-top navbar-expand-lg navbar-light bg-dark m-3 rounded">
+        <a class="navbar-brand p-0 m-0" href="index.html">
+        <img class="p-0 m-0 rounded" src="images/logo.png" height="40" alt="Festival Logo">
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-light mr-1" href="index.html">Početna<span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-light mr-1" href="vesti.html">Vesti</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light mr-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              O festivalu
+            </a>
+                    <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="istorijat.html">Istorijat</a>
+                        <a class="dropdown-item" href="ziri.html">Žiri</a>
+                        <a class="dropdown-item" href="prodaja.html">Prodajna mesta</a>
+                        <a class="dropdown-item" href="kontakt.html">Kontakt</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light mr-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Filmovi
+            </a>
+                    <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="repertoar.html">Reperotar</a>
+                        <a class="dropdown-item" href="omiljeni.html">Omiljeni filmovi</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="glumci.html">Glumci</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="sponzori.html">Sponzori</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav navbar-right">
+                <li class="nav-item dropdown">
+                    <a href="https://www.facebook.com" class="fa fa-facebook mr-0"></a>
+                    <a href="https://twitter.com" class="fa fa-twitter mr-3"></a>
+                    <a class="text-light ml-2" href="omiljeni.html" id="jezik">SR</a>
+                    <a class="text-light">|</a>
+                    <a class="text-light mr-2" href="omiljeniEN.html" id="jezik">EN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="breadcrumb bg-dark">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">
+                            <font color="white" face="Palatino Linotype">Početna</font>
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <font face="Palatino Linotype">Omiljeni filmovi</font>
+                    </li>
+                </ul>
             </div>
-            <div class="row">
-               <div class="col-sm-10">
-                  <div class="jumbotron">
+        </div>
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="jumbotron">
 
-                     <div class="row">
+                    <div class="row">
                         <div class="col-sm-6">
-                           <h1>Program</h1>
+                            <h1>Program</h1>
                         </div>
                         <div class="col-sm-3">
-                           <select class="custom-select" id="sel">
+                            <select class="custom-select" id="sel">
                               <option selected>Sortiraj po</option>
                               <option value="1">Ime filma</option>
                               <option value="3">Popularnost</option>
                            </select>
                         </div>
                         <div class="col-sm-3">
-                           <button class="btn btn-dark" id="btnId">Sortiraj</button>
+                            <button class="btn btn-dark" id="btnId">Sortiraj</button>
                         </div>
-                     </div>
-                     <hr>
-                     <label id="poruka"></label>
-                     <div class= "film" id = "film1">
-                     <div class= "row">
-                        
-                        <div class = "col-sm-6">
-                           <a href="film1.html"><img  class ="m-2" class= "align-self-start"src="images/poster1.jpg" width="150px" height = "200px" align="left"></a> 
-                           <a href="film1.html" class="naslovFilma">
-                              <h2>CRNI LEPTIR</h2>
-                              
-                           </a>
-                           
-                           <i>Triler | 93 min</i><br><br>
-                           <i>Pocetak prikazivanja :</i> 10.05.2018
-                           <br><br>
-                           <img src = "images/1star.png" width="100px">
-                        </div>
-                        <div class = "col-sm-6">
-                           <p class="font-monospace"><font size = "2"><b>Kratak sadrzaj:</b> Na obodu planinskog gradića, u kome se događa niz otmica i ubistava, povučeni pisac Pol pokušava da započne pisanje scenarija za koji se nada da će mu spasiti karijeru.</font></p>
-                           <p><b>Glumci:</b> Antonio Banderas, Jonathan Rhys Meyers, Piper Perabo</p>
-                           <p><b>Reziser:</b> Brian Goodman</p>
-                        </div>
-                        
-                     </div>
-                     <hr>
-                 </div>
-                     <div class= "film" id = "film2">
-                     <div class= "row">
-                        
-                        <div class = "col-sm-6">
-                           <a href="film2.html"><img  class ="m-2" class= "align-self-start"src="images/poster2.jpg" width="150px" height = "200px" align="left"></a> 
-                           <a href="film2.html" class="naslovFilma">
-                              <h2>FANTASTIČNA ŽENA</h2>
-                              
-                           </a>
-                          
-                           <i>Drama | 100 min</i><br><br>
-                           <i>Pocetak prikazivanja :</i> 24.05.2018
-                           <br><br>
-                           <img src = "images/5stars.png" width="100px">
-                        </div>
-                        <div class = "col-sm-6">
-                           <p class="font-monospace"><font size = "2"><b>Kratak sadrzaj:</b> Marina je mlada konobarica i buduća pevačica. Orlando ima svoju štampariju. Zajedno planiraju budućnost. Kada Orlando iznenada umre, Marina mora da se suprotstavi njegovoj porodici i društvu i pokaže im ko ja ona zapravo – složena, snažna, iskrena i... fantastična žena.</font></p>
-                           <p><b>Glumci:</b> Daniela Vega, Francisco Reyes, Luis Gnecco, Aline Küppenheim</p>
-                           <p><b>Reziser:</b> Sebastián Lelio</p>
-                        </div>
-                        
-                     </div>
-                     <hr>
-                 </div>
-                     <div class= "film" id = "film3">
-                     <div class= "row">
-                        
-                        <div class = "col-sm-6">
-                           <a href="film3.html"><img  class ="m-2" class= "align-self-start"src="images/poster3.jpg" width="150px" height = "200px" align="left"></a> 
-                           <a href="film3.html" class="naslovFilma">
-                              <h2>DOVIĐENJA, TAMO GORE</h2>
-                              
-                           </a>
-                           
-                           <i>   Drama | 117 min</i><br><br>
-                           <i>Pocetak prikazivanja :</i> 24.05.2018
-                           <br><br>
-                           <img src = "images/3stars.png" width="100px">
-                        </div>
-                        <div class = "col-sm-6">
-                           <p class="font-monospace"><font size = "2"><b>Kratak sadrzaj:</b> U novembru 1919. dvojica preživelih iz rovova smišljaju šemu sa spomenicima veteranima. Jedan je izuzetni dizajner, a drugi skromni računovođa. U Francuskoj ludih dvadesetih, njihova operacija postaje koliko opasna, toliko i spektakularna.</font></p>
-                           <p><b>Glumci:</b> Nahuel Pérez Biscayart, Albert Dupontel, Laurent Lafitte</p>
-                           <p><b>Reziser:</b> Albert Dupontel</p>
-                        </div>
-                        
-                     
-                 </div>
-                 <hr>
-                     </div>
-                     <div class= "film" id = "film4">
-                     <div class= "row">
-                     
-                        
-                        <div class = "col-sm-6">
-                           <a href="film4.html"><img  class ="m-2" class= "align-self-start"src="images/poster4.jpg" width="150px" height = "200px" align="left"></a> 
-                           <a href="film4.html" class="naslovFilma">
-                              <h2>AFERA: NIL-HILTON</h2>
-                             
-                           </a>
-                            
-                           <i>Triler | 106 min</i><br><br>
-                           <i>Pocetak prikazivanja :</i> 28.02.2018  
-                           <br><br>
-                           <img src = "images/2stars.png" width="100px">
-                        </div>
-                        <div class = "col-sm-6">
-                           <p class="font-monospace"><font size = "2"><b>Kratak sadrzaj:</b> Kairo, 2011. godine, nekoliko nedelja pre izbijanja revolucije. Detektiv Noredin, koji radi u ozloglašenoj Kasr el-Nil policijskoj stanici, dobija zadatak da istraži slučaj ubijene pevačice.</font></p>
-                           <p><b>Glumci:</b> Fares Fares, Mari Malek, Yasser Ali Maher</p>
-                           <p><b>Reziser:</b>Tarik Saleh</p>
-                        </div>
-                       
-                     </div>
-                      <hr>
+                    </div>
+                    <hr>
+                    <label id="poruka"></label>
+                    <div class="film" id="film1">
+                        <div class="row">
 
-                 </div>
-                                                
-                  </div>
-                  <button class="btn btn-dark" style="float:right" onclick="ocisti()"><font color="gold">Obrisi sve omiljene</font></button>
-               </div>
+                            <div class="col-sm-6">
+                                <a href="film1.html"><img  class ="m-2" class= "align-self-start"src="images/poster1.jpg" width="150px" height = "200px" align="left"></a>
+                                <a href="film1.html" class="naslovFilma">
+                                    <h2>CRNI LEPTIR</h2>
+
+                                </a>
+
+                                <i>Triler | 93 min</i><br><br>
+                                <i>Pocetak prikazivanja :</i> 10.05.2018
+                                <br><br>
+                                <img src="images/1star.png" width="100px">
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="font-monospace">
+                                    <font size="2"><b>Kratak sadrzaj:</b> Na obodu planinskog gradića, u kome se događa niz otmica i ubistava, povučeni pisac Pol pokušava da započne pisanje scenarija za koji se nada da će mu spasiti karijeru.</font>
+                                </p>
+                                <p><b>Glumci:</b> Antonio Banderas, Jonathan Rhys Meyers, Piper Perabo</p>
+                                <p><b>Reziser:</b> Brian Goodman</p>
+                            </div>
+
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="film" id="film2">
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                <a href="film2.html"><img  class ="m-2" class= "align-self-start"src="images/poster2.jpg" width="150px" height = "200px" align="left"></a>
+                                <a href="film2.html" class="naslovFilma">
+                                    <h2>FANTASTIČNA ŽENA</h2>
+
+                                </a>
+
+                                <i>Drama | 100 min</i><br><br>
+                                <i>Pocetak prikazivanja :</i> 24.05.2018
+                                <br><br>
+                                <img src="images/5stars.png" width="100px">
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="font-monospace">
+                                    <font size="2"><b>Kratak sadrzaj:</b> Marina je mlada konobarica i buduća pevačica. Orlando ima svoju štampariju. Zajedno planiraju budućnost. Kada Orlando iznenada umre, Marina mora da se suprotstavi njegovoj porodici i društvu i pokaže im ko ja ona zapravo – složena, snažna, iskrena i... fantastična žena.</font>
+                                </p>
+                                <p><b>Glumci:</b> Daniela Vega, Francisco Reyes, Luis Gnecco, Aline Küppenheim</p>
+                                <p><b>Reziser:</b> Sebastián Lelio</p>
+                            </div>
+
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="film" id="film3">
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                <a href="film3.html"><img  class ="m-2" class= "align-self-start"src="images/poster3.jpg" width="150px" height = "200px" align="left"></a>
+                                <a href="film3.html" class="naslovFilma">
+                                    <h2>DOVIĐENJA, TAMO GORE</h2>
+
+                                </a>
+
+                                <i>   Drama | 117 min</i><br><br>
+                                <i>Pocetak prikazivanja :</i> 24.05.2018
+                                <br><br>
+                                <img src="images/3stars.png" width="100px">
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="font-monospace">
+                                    <font size="2"><b>Kratak sadrzaj:</b> U novembru 1919. dvojica preživelih iz rovova smišljaju šemu sa spomenicima veteranima. Jedan je izuzetni dizajner, a drugi skromni računovođa. U Francuskoj ludih dvadesetih, njihova operacija postaje koliko opasna, toliko i spektakularna.</font>
+                                </p>
+                                <p><b>Glumci:</b> Nahuel Pérez Biscayart, Albert Dupontel, Laurent Lafitte</p>
+                                <p><b>Reziser:</b> Albert Dupontel</p>
+                            </div>
+
+
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="film" id="film4">
+                        <div class="row">
+
+
+                            <div class="col-sm-6">
+                                <a href="film4.html"><img  class ="m-2" class= "align-self-start"src="images/poster4.jpg" width="150px" height = "200px" align="left"></a>
+                                <a href="film4.html" class="naslovFilma">
+                                    <h2>AFERA: NIL-HILTON</h2>
+
+                                </a>
+
+                                <i>Triler | 106 min</i><br><br>
+                                <i>Pocetak prikazivanja :</i> 28.02.2018
+                                <br><br>
+                                <img src="images/2stars.png" width="100px">
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="font-monospace">
+                                    <font size="2"><b>Kratak sadrzaj:</b> Kairo, 2011. godine, nekoliko nedelja pre izbijanja revolucije. Detektiv Noredin, koji radi u ozloglašenoj Kasr el-Nil policijskoj stanici, dobija zadatak da istraži slučaj ubijene pevačice.</font>
+                                </p>
+                                <p><b>Glumci:</b> Fares Fares, Mari Malek, Yasser Ali Maher</p>
+                                <p><b>Reziser:</b>Tarik Saleh</p>
+                            </div>
+
+                        </div>
+                        <hr>
+
+                    </div>
+
+                </div>
+                <button class="btn btn-dark" style="float:right" onclick="ocisti()"><font color="gold">Obrisi sve omiljene</font></button>
             </div>
-         </div>
+        </div>
+    </div>
 
-         <br/><br/>
-        <footer class="page-footer font-small bg-dark pt-4 mt-4">
-            <div class="container-fluid ">
-                <div class="row">
-                    <div class="col-sm-3"><img class="m-3 rounded"  src="images/logo.png" align="left" width="150px" height="100px" float="left"></div>
-                    <div class="col-sm-6">
-                        <center class="m-3">
-                            <p style="color:white; padding-bottom:1px; margin-bottom:1px; padding-top:1px; margin-top:1px;">
-                                <i>Copyright &copy; 2018 Elektrotehnički fakultet Univerziteta u Beogradu,
+    <br/><br/>
+    <footer class="page-footer font-small bg-dark pt-4 mt-4">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-sm-3"><img class="m-3 rounded" src="images/logo.png" align="left" width="150px" height="100px" float="left"></div>
+                <div class="col-sm-6">
+                    <center class="m-3">
+                        <p style="color:white; padding-bottom:1px; margin-bottom:1px; padding-top:1px; margin-top:1px;">
+                            <i>Copyright &copy; 2018 Elektrotehnički fakultet Univerziteta u Beogradu,
                                 odsek za softversko inženjerstvo <br>Razvijeno od strane<b>
                                 Ćirić Dejana, Zarubica Miljana</b> </i>
-                            </p>
-                        </center>
-                    </div>
-                    <div class="col-sm-3">
-                        <img class="m-3" src="images/etf.gif" align="right" width="100px" height="100px" float ="left">
-                    </div>
+                        </p>
+                    </center>
+                </div>
+                <div class="col-sm-3">
+                    <img class="m-3" src="images/etf.gif" align="right" width="100px" height="100px" float="left">
                 </div>
             </div>
-        </footer>
-         	<script>
-function ucitaj() {
+        </div>
+    </footer>
+    <script>
+        function ucitaj() {
 
-   film1.style.display = 'none';
-   film2.style.display = 'none';
-   film3.style.display = 'none';
-   film4.style.display = 'none';
+            film1.style.display = 'none';
+            film2.style.display = 'none';
+            film3.style.display = 'none';
+            film4.style.display = 'none';
 
-   if (localStorage.omiljeni){
-         tokens = localStorage.omiljeni.split(" ");
+            if (localStorage.omiljeni) {
+                tokens = localStorage.omiljeni.split(" ");
 
-   for (var i = 0; i < tokens.length; i++){
-      switch(tokens[i]){
-         case "film1":
-         film1.style.display = 'block';
-         break;
-          case "film2":
-film2.style.display = 'block';
-         break;
-          case "film3":
-film3.style.display = 'block';
-         break;
-          case "film4":
-film4.style.display = 'block';
-         break;
-      }
-   }
-}else
-document.getElementById("poruka").innerHTML = "Nemate trenutno omiljenih filmova!";
+                for (var i = 0; i < tokens.length; i++) {
+                    switch (tokens[i]) {
+                        case "film1":
+                            film1.style.display = 'block';
+                            break;
+                        case "film2":
+                            film2.style.display = 'block';
+                            break;
+                        case "film3":
+                            film3.style.display = 'block';
+                            break;
+                        case "film4":
+                            film4.style.display = 'block';
+                            break;
+                    }
+                }
+            } else
+                document.getElementById("poruka").innerHTML = "Nemate trenutno omiljenih filmova!";
 
 
-}
+        }
 
-     $(function(){
-       
-       var alpha = [];
-       var number = [];
-       var normal = []
-       var popularni = []
-       
-       $('.film').each(function(){
-         
-         var alphaArr = [];
-         var numArr = [];
-         var normalArr = [];
-         var populArr = [];
-         
-         alphaArr.push($('h2', this).text());
-         alphaArr.push($(this));
-         alpha.push(alphaArr);
-         alpha.sort();
-         
-         numArr.push($('h3', this).text());
-         numArr.push($(this));
-         number.push(numArr);
-         number.sort();
+        $(function() {
 
-         normalArr.push($('h3', this).text());
-         normalArr.push($(this));
-         normal.push(normalArr);
+            var alpha = [];
+            var number = [];
+            var normal = []
+            var popularni = []
 
-         var str ;
-         switch($('h2', this).text()){
-           case "CRNI LEPTIR":
-            if(localStorage.film1)
-               str = localStorage.film1;
-            else
-               str = 0;
-            break;
-            case "FANTASTIČNA ŽENA":
-            if(localStorage.film2)
-               str = localStorage.film2;
-            else
-               str = 0;
-            break;
-            case "DOVIĐENJA, TAMO GORE":
-            if(localStorage.film3)
-               str = localStorage.film3;
-            else
-               str = 0;
-            break;
-            case "AFERA: NIL-HILTON":
-            if(localStorage.film4)
-               str = localStorage.film4;
-            else
-               str = 0;
-            break;
+            $('.film').each(function() {
 
-         }
+                var alphaArr = [];
+                var numArr = [];
+                var normalArr = [];
+                var populArr = [];
 
-         populArr.push(str);
-         populArr.push($(this));
-         popularni.push(populArr);
-         popularni.sort();
-        popularni.reverse();
+                alphaArr.push($('h2', this).text());
+                alphaArr.push($(this));
+                alpha.push(alphaArr);
+                alpha.sort();
 
-       })
-       
-       
-       $('#btnId').on('click', function(){
-         $('.film').remove();
-         if (document.getElementById("sel").value=="1"){
-         for(var i=0; i<alpha.length; i++){
-           $('.jumbotron').append(alpha[i][1]);
-       }
-         }else if(document.getElementById("sel").value=="3"){
-            for(var i=0; i<popularni.length; i++){
-           $('.jumbotron').append(popularni[i][1]);
-         }
-     }
-         else{
-            for(var i=0; i<normal.length; i++){
-           $('.jumbotron').append(normal[i][1]);
-         }
-         
-         }
-       })
-       
+                numArr.push($('h3', this).text());
+                numArr.push($(this));
+                number.push(numArr);
+                number.sort();
 
-       
-     })
+                normalArr.push($('h3', this).text());
+                normalArr.push($(this));
+                normal.push(normalArr);
 
-        function ocisti(){
-            
-            if (localStorage.omiljeni){
-              
-              localStorage.removeItem("omiljeni");
+                var str;
+                switch ($('h2', this).text()) {
+                    case "CRNI LEPTIR":
+                        if (localStorage.film1)
+                            str = localStorage.film1;
+                        else
+                            str = 0;
+                        break;
+                    case "FANTASTIČNA ŽENA":
+                        if (localStorage.film2)
+                            str = localStorage.film2;
+                        else
+                            str = 0;
+                        break;
+                    case "DOVIĐENJA, TAMO GORE":
+                        if (localStorage.film3)
+                            str = localStorage.film3;
+                        else
+                            str = 0;
+                        break;
+                    case "AFERA: NIL-HILTON":
+                        if (localStorage.film4)
+                            str = localStorage.film4;
+                        else
+                            str = 0;
+                        break;
+
+                }
+
+                populArr.push(str);
+                populArr.push($(this));
+                popularni.push(populArr);
+                popularni.sort();
+                popularni.reverse();
+
+            })
+
+
+            $('#btnId').on('click', function() {
+                $('.film').remove();
+                if (document.getElementById("sel").value == "1") {
+                    for (var i = 0; i < alpha.length; i++) {
+                        $('.jumbotron').append(alpha[i][1]);
+                    }
+                } else if (document.getElementById("sel").value == "3") {
+                    for (var i = 0; i < popularni.length; i++) {
+                        $('.jumbotron').append(popularni[i][1]);
+                    }
+                } else {
+                    for (var i = 0; i < normal.length; i++) {
+                        $('.jumbotron').append(normal[i][1]);
+                    }
+
+                }
+            })
+
+
+
+        })
+
+        function ocisti() {
+
+            if (localStorage.omiljeni) {
+
+                localStorage.removeItem("omiljeni");
             }
             location.reload();
-            
-           }
-	
-	</script>
-      </body>
-   </html>
+
+        }
+    </script>
+</body>
+
+</html>
